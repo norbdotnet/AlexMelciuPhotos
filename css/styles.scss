@@ -1,52 +1,5 @@
-@charset "UTF-8";
-/* Fix navbar at the top and give it a semi-transparent background */
-.amf-navbar {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  width: 100%;
-  background-color: white;
-}
-
-.amf-nav-brand {
-  font-family: "Satisfy", serif;
-  margin-left: 10px;
-  --bs-navbar-brand-margin-end: 0;
-}
-
-.amf-dd-menu {
-  background-color: transparent;
-  border-width: 0;
-  --bs-dropdown-padding-y: 0;
-}
-
-.amf-dd-item, .amf-nav-link {
-  font-family: "Libre Baskerville", serif;
-  font-size: 16px;
-  text-align: center;
-  background-color: rgba(169, 169, 169, 0.6);
-  border-radius: 10px;
-  margin: 3px;
-}
-
-.amf-nav-link {
-  --bs-nav-link-padding-y: 0;
-  --bs-nav-link-padding-x: 10px;
-}
-
-.amf-dd-item {
-  --bs-dropdown-item-padding-y: 0;
-}
-
-.amf-nav-link:hover,
-.amf-dd-item:hover {
-  background-color: rgba(128, 128, 128, 0.6);
-}
-
-.amf-dd-item.active {
-  --bs-dropdown-link-active-bg: rgba(128, 128, 128, 0.6);
-  --bs-dropdown-link-active-color: black;
-}
+@use "_navbar.scss" as navbar;
+@use "_variables.scss" as var;
 
 /* Background container with padding and border */
 .background-img {
@@ -71,20 +24,22 @@
   margin-top: 50px;
   display: flex;
   align-items: center;
-}
-#amf-page-container .amf-background img {
-  position: fixed;
-  margin-top: -50px;
-  width: 100%;
-  height: auto;
-}
-#amf-page-container .amf-center-text span {
-  margin-top: 10vw;
-  width: 100%;
-  text-align: center;
-  position: fixed;
-  font-family: "Lora", serif;
-  font-size: 5vw;
+
+  .amf-background img {
+    position: fixed;
+    margin-top: -50px;
+    width: 100%;
+    height: auto;
+  }
+
+  .amf-center-text span {
+    margin-top: 10vw;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    font-family: "Lora", serif;
+    font-size: 5vw;
+  }
 }
 
 body > div.container {
@@ -100,8 +55,7 @@ body > div.container {
 .img-container img {
   width: 100%;
   height: 100%; /* Make the image fill the container */
-  -o-object-fit: cover;
-     object-fit: cover; /* Ensure the image fits and scales while maintaining its aspect ratio */
+  object-fit: cover; /* Ensure the image fits and scales while maintaining its aspect ratio */
   padding-top: 5px;
   border-radius: 25px;
 }

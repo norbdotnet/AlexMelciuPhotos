@@ -7,14 +7,37 @@
 	"settings": {
 		"css.styleSheets": [
 			"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-		]
+		],
+		"liveSassCompile.settings.formats": [
+			{
+				"format": "expanded",
+				"extensionName": ".css",
+				"savePath": null,
+				"savePathReplacementPairs": null
+			}
+		],
+		"liveSassCompile.settings.excludeList": [
+			"/**/node_modules/**",
+			"/.vscode/**",
+		],
+		"liveSassCompile.settings.partialsList": [
+			"/**/_*.scss"
+		],
+		"liveSassCompile.settings.includeItems": [
+			"/css/styles.scss"
+		],
+		"liveSassCompile.settings.generateMap": false,
+		"editor.formatOnSave": true,
+		"prettier.singleAttributePerLine": false,
+		"prettier.printWidth": 200
 	},
 	"extensions": {
 		"recommendations": [
 			"dbaeumer.vscode-eslint",
 			"ecmel.vscode-html-css",
 			"esbenp.prettier-vscode",
-			"ritwickdey.LiveServer"
+			"ritwickdey.LiveServer",
+			"glenn2223.live-sass"
 		],
 	},
 }

@@ -1,0 +1,55 @@
+@use "_variables.scss" as var;
+
+/* Fix navbar at the top and give it a semi-transparent background */
+.amf-navbar {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  background-color: var.$navbar-background-color;
+}
+
+.amf-nav-brand {
+  font-family: "Satisfy", serif;
+  margin-left: 10px;
+  --bs-navbar-brand-margin-end: 0;
+}
+
+.amf-dd-menu {
+  background-color: transparent;
+  border-width: 0;
+  --bs-dropdown-padding-y: 0;
+}
+
+%common-nav-item {
+  // text
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  text-align: center;
+
+  // margins
+  background-color: rgba(169, 169, 169, 0.6);
+  border-radius: 10px;
+  margin: 3px;
+}
+
+.amf-nav-link {
+  @extend %common-nav-item;
+  --bs-nav-link-padding-y: 0;
+  --bs-nav-link-padding-x: 10px;
+}
+
+.amf-dd-item {
+  @extend %common-nav-item;
+  --bs-dropdown-item-padding-y: 0;
+}
+
+.amf-nav-link:hover,
+.amf-dd-item:hover {
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+.amf-dd-item.active {
+  --bs-dropdown-link-active-bg: rgba(128, 128, 128, 0.6);
+  --bs-dropdown-link-active-color: black;
+}
