@@ -1,0 +1,101 @@
+/* Fix navbar at the top and give it a semi-transparent background */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    /* Ensures it stays above other content */
+    background-color: transparent;
+    /* Semi-transparent background */
+}
+
+.dropdown-menu, .dropdown-item:hover {
+    background-color: transparent;
+    --bs-dropdown-min-width: 50px;
+    border-width: 0;
+}
+
+/* Background container with padding and border */
+.background-img {
+    position: fixed;
+    margin-top: -170px;
+    border: 2px solid white;  /* Set the border color and thickness */
+    border-radius: 5px;  /* Slightly round the corners */
+    overflow: hidden;  /* Ensures the image doesn’t overflow the rounded corners */
+    width: 100%;
+    height: auto;  /* Full height for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional shadow for the container */
+}
+
+/* Image inside the background container */
+.background-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;  /* Slight rounding of the image itself */
+}
+
+body > div.container {
+    position: relative;
+    margin-top: 170px;
+}
+
+.dropdown-item {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;  /* Ensure the container takes up the full space */
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;  /* Make the image fill the container */
+    object-fit: cover;  /* Ensure the image fits and scales while maintaining its aspect ratio */
+    padding-top: 5px;
+    border-radius: 25px;
+}
+
+/* Ensure the logo fits within the navbar */
+.navbar-brand img {
+    height: 50px;
+    /* Adjust the height to match the navbar height */
+    width: auto;
+}
+
+/* Push content down to avoid being overlapped by the fixed navbar */
+.content-wrapper {
+    padding-top: 80px;
+    /* Adjust this value based on navbar height */
+}
+
+.nav-link {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+}
+
+/* Full-width responsive image */
+.full-page-image {
+    width: 100%;
+    height: auto;
+    /* Automatically adjust height to maintain aspect ratio */
+}
+
+/* Call to action text */
+.call-to-action {
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+    font-family: 'Lora', serif;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.call-to-action h1 {
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Libre', serif;
+}
