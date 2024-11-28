@@ -90,3 +90,11 @@ body > div.container {
   font-weight: 400;
   font-family: "Libre", serif;
 }
+
+.modal.fade.show {
+  background-color: rgba(0, 0, 0, 1); /* Darker, more opaque background */
+}
+
+#photoGallery div img {
+  border-radius: 10px;
+}

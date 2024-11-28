@@ -1,145 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
-<body>
+  <head> </head>
+  <body>
     <div id="amf-navbar-container"></div>
-    <div class="container"></div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-20240630-DSC04805-2.jpg" alt="miri se plimba">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC03417-2.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC03431.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC03461.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC03507.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC03713.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC03760.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC03882.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04008.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04011.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04088.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04199.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04288.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04357.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04429.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04546.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04669.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04782-2.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04796.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04798.jpg">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04805.jpg">
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-container">
-                    <img src="images/Nunti/20240630-DSC04850.jpg">
-                </div>
-            </div>
-        </div>
+    <div class="container my-5">
+      <div class="row g-4" id="photoGallery"></div>
     </div>
-    
+
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" id="carouselItems"></div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script>
+      const images = [
+        "01 P dansul mirilor nunta cununie.jpg",
+        "02 P cununie religioasa mire mireasa biserica.jpg",
+        "03 P poza botez copil.jpg",
+        "04 P cununie religioasa mire mireasa biserica.jpg",
+        "05 L botez copil biserica mir.jpg",
+        "06 P decor nunta exterior.jpg",
+        "07 P cort nunta.jpg",
+        "08 P cuplu nunta selfie invitati.jpg",
+        "09 P copil pe leagan nunta afara.jpg",
+        "10 P nunta invitati la masa.jpg",
+        "11 P invitat nunta conversatie mireasa zambet.jpg",
+        "12 P cuplu nunta invitati.jpg",
+        "13 P cuplu nunta la masa afara.jpg",
+        "14 P zambet invitata nunta masa cort.jpg",
+        "15 P dansul mirilor zambet nunta mireasa fum.jpg",
+        "16 P dansul mirilor baloane de sapun fum nunta cununie alb negru.jpg",
+        "17 P dansul mirilor cununie nunta artificii mireasa mire.jpg",
+        "18 P dansul mirilor cununie nunta mireasa mire alb negru.jpg",
+        "19 P dansul mirilor cununie nunta.jpg",
+      ];
+      const photoGallery = document.getElementById("photoGallery");
+      const carouselItems = document.getElementById("carouselItems");
+
+      addImages("images/Nunti/", images, photoGallery, carouselItems);
+    </script>
+  </body>
 </html>
