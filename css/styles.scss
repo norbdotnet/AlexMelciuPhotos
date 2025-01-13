@@ -1,5 +1,7 @@
 @use "_navbar.scss" as navbar;
 @use "_variables.scss" as var;
+@use "_menu-images.scss" as menu-images;
+@use "services" as services;
 
 /* Background container with padding and border */
 .background-img {

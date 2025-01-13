@@ -1,0 +1,40 @@
+.amf-menu-images {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers items horizontally */
+  flex-wrap: wrap; /* Allows wrapping of images if necessary */
+  margin: 50px auto; /* Center the container horizontally and add top/bottom margin */
+  padding: 20px; /* Padding inside the container */
+  max-width: 80%; /* Limits the width of the container */
+  box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+.amf-menu-images a {
+  display: flex; /* Enables Flexbox for <a> */
+  flex-direction: column; /* Arranges content vertically */
+  justify-content: center; /* Centers the image vertically */
+  align-items: center; /* Centers the image horizontally */
+  width: 350px; /* Sets the same width for all <a> elements */
+  height: 450px; /* Sets the same height for all <a> elements */
+  text-decoration: none; /* Removes underline from links */
+  overflow: hidden; /* Ensures content fits inside the <a> box */
+  transition: transform 0.4s; /* Smooth hover effect */
+}
+
+.amf-menu-images a:hover {
+  transform: scale(1.04); /* Slight zoom effect on hover */
+}
+
+.amf-menu-images img {
+  max-width: 100%; /* Ensures images never exceed their container's width */
+  max-height: 100%; /* Ensures images never exceed their container's height */
+  object-fit: contain; /* Centers and scales the image while preserving aspect ratio */
+}
+
+.amf-menu-images p {
+  margin: 10px 0 0; /* Space above the text */
+  font-size: 1rem; /* Resizes with the browser width */
+  font-family: "Lora", serif;
+  font-size: large;
+  line-height: 1.5; /* Improves readability */
+  text-align: center; /* Centers text below the image */
+}

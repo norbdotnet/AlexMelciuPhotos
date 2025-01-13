@@ -32,14 +32,22 @@ function addImages(commonPath, imageNames, photoGallery, carouselItems) {
     imageNames.forEach((src, index) => {
         // Create gallery item
         const col = document.createElement('div');
-        col.className = 'col-6 d-flex align-items-center';
-        col.innerHTML = `<img src="${commonPath+src}" class="img-fluid gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-index="${index}">`;
+        col.className = isLandscape(src) ? 'col-12' : 'col-6' + ' d-flex align-items-center';
+        col.innerHTML = `<img src="${commonPath+src}" alt="${src.substring(5)}" class="img-fluid gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal" data-index="${index}">`;
         photoGallery.appendChild(col);
     
         // Add carousel item
         const carouselItem = document.createElement('div');
         carouselItem.className = `carousel-item ${index === 0 ? 'active' : ''}`;
-        carouselItem.innerHTML = `<img src="${commonPath+src}" class="d-block w-100">`;
+        carouselItem.innerHTML = `<img src="${commonPath+src}" alt="${src.substring(5)}" class="d-block w-100">`;
         carouselItems.appendChild(carouselItem);
     });
+
+    function isLandscape(imgName) {
+        const grouping = imgName.split(" ");
+        if (grouping.length > 1 && grouping[1] === "L")  {
+            return true;
+        }
+        return false
+    }
 }

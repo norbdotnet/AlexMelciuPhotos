@@ -1,0 +1,58 @@
+.amf-service-descriptions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 80%;
+  box-sizing: border-box;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 250px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-box:hover {
+  transform: scale(1.05);
+}
+
+.service-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.features .icon {
+  color: #4caf50; /* Green color for checkmarks */
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.2rem; /* Slightly larger for emphasis */
+}
